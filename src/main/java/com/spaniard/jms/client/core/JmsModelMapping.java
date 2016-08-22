@@ -6,15 +6,14 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Анотация для мапинга DTO на jms очередь
- * Используется в JmsModelMappingBeanPostProcessor
- * created 06.10.15
+ * Mapping DTO class to Jms queue
+ * Used in JmsModelMappingBeanPostProcessor
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
 public @interface JmsModelMapping {
 
-    // Название бина очереди jms
+    // Jms Queue bean name
     String value() default "";
 
 }
